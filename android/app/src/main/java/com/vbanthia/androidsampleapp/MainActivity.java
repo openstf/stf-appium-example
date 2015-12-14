@@ -1,38 +1,86 @@
 package com.vbanthia.androidsampleapp;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity implements View.OnClickListener{
+
+    private EditText leftInput;
+    private EditText rightInput;
+    private Button addButton;
+    private Button subButton;
+    private Button mulButton;
+    private Button divButton;
+    private TextView resultText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Initialize view
+        leftInput  = (EditText) findViewById(R.id.inputFieldLeft);
+        rightInput = (EditText) findViewById(R.id.inputFieldRight);
+        addButton  = (Button)   findViewById(R.id.additionButton);
+        subButton  = (Button)   findViewById(R.id.subtractButton);
+        mulButton  = (Button)   findViewById(R.id.multiplicationButton);
+        divButton  = (Button)   findViewById(R.id.divisionButton);
+        resultText = (TextView) findViewById(R.id.resultTextView);
+
+        addButton.setOnClickListener(this);
+        subButton.setOnClickListener(this);
+        mulButton.setOnClickListener(this);
+        divButton.setOnClickListener(this);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public void onClick(View view) {
+        float left, right;
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        try {
+            left = Float.parseFloat(leftInput.getText().toString());
+            right = Float.parseFloat(rightInput.getText().toString());
+        } catch (Exception e) {
+            showError();
+            return;
         }
 
-        return super.onOptionsItemSelected(item);
+        String operation = "";
+        float result = 0;
+
+        switch (view.getId()) {
+            case R.id.additionButton:
+                operation = "+";
+                result = left + right;
+                break;
+            case R.id.subtractButton:
+                operation = "-";
+                result = left - right;
+                break;
+            case R.id.multiplicationButton:
+                operation = "*";
+                result = left * right;
+                break;
+            case R.id.divisionButton:
+                operation = "*";
+                result = left / right;
+                break;
+            default:
+                break;
+        }
+
+        resultText.setText(String.format("%.2f %s %.2f = %.2f", left, operation, right, result));
+        leftInput.setText("");
+        rightInput.setText("");
+    }
+
+    private void showError() {
+        String errorMsg = "Please, fill the input fields correctly";
+        resultText.setText(errorMsg);
     }
 }
