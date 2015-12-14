@@ -1,0 +1,23 @@
+{
+  "name": "stf-appium-example",
+  "version": "1.0.0",
+  "description": "STF Appium Examples",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbanthia/stf-appium-example.git"
+  },
+  "keywords": [
+    "openstf",
+    "appium"
+  ],
+  "author": "Vishal Banthia <vishal.banthia.vb@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vbanthia/stf-appium-example/issues"
+  },
+  "homepage": "https://github.com/vbanthia/stf-appium-example#readme",
+  "dependencies": {
+    "appium": "^1.4.16"
+  }
+}

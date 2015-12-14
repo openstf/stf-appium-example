@@ -1,0 +1,64 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appium_lib (8.0.0)
+      awesome_print (~> 1.6)
+      json (~> 1.8)
+      nokogiri (~> 1.6.6)
+      selenium-webdriver (~> 2.48)
+      toml (~> 0.0)
+    awesome_print (1.6.1)
+    blankslate (2.1.2.4)
+    childprocess (0.5.8)
+      ffi (~> 1.0, >= 1.0.11)
+    coderay (1.1.0)
+    diff-lcs (1.2.5)
+    ffi (1.9.10)
+    json (1.8.3)
+    method_source (0.8.2)
+    mini_portile2 (2.0.0)
+    multi_json (1.11.2)
+    nokogiri (1.6.7)
+      mini_portile2 (~> 2.0.0.rc2)
+    parslet (1.5.0)
+      blankslate (~> 2.0)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rake (10.4.2)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.1)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    rubyzip (1.1.7)
+    selenium-webdriver (2.48.1)
+      childprocess (~> 0.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
+    slop (3.6.0)
+    toml (0.1.2)
+      parslet (~> 1.5.0)
+    websocket (1.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appium_lib
+  pry
+  rake
+  rspec
+
+BUNDLED WITH
+   1.11.0
