@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="5pt"
             android:id="@+id/inputFieldLeft"
+            android:contentDescription="inputFieldLeft"
             android:layout_width="match_parent"
             android:inputType="numberDecimal">
         </EditText>
@@ -24,6 +25,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5pt"
             android:id="@+id/inputFieldRight"
+            android:contentDescription="inputFieldRight"
             android:layout_width="match_parent"
             android:inputType="numberDecimal">
         </EditText>
@@ -41,6 +43,7 @@
             android:layout_weight="1"
             android:text="+"
             android:textSize="8pt"
+            android:contentDescription="additionButton"
             android:id="@+id/additionButton">
         </Button>
         <Button
@@ -49,6 +52,7 @@
             android:layout_weight="1"
             android:text="-"
             android:textSize="8pt"
+            android:contentDescription="subtractButton"
             android:id="@+id/subtractButton">
         </Button>
         <Button
@@ -57,6 +61,7 @@
             android:layout_weight="1"
             android:text="*"
             android:textSize="8pt"
+            android:contentDescription="multiplicationButton"
             android:id="@+id/multiplicationButton">
         </Button>
         <Button
@@ -65,7 +70,17 @@
             android:layout_weight="1"
             android:text="/"
             android:textSize="8pt"
+            android:contentDescription="divisionButton"
             android:id="@+id/divisionButton">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="reset"
+            android:textSize="8pt"
+            android:contentDescription="resetButton"
+            android:id="@+id/resetButton">
         </Button>
 
     </LinearLayout>
@@ -77,6 +92,7 @@
         android:textSize="12pt"
         android:layout_marginTop="5pt"
         android:id="@+id/resultTextView"
+        android:contentDescription="resultTextView"
         android:gravity="center_horizontal">
     </TextView>
 

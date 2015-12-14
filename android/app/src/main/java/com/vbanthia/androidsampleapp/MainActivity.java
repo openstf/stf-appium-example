@@ -16,6 +16,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private Button subButton;
     private Button mulButton;
     private Button divButton;
+    private Button resetButton;
     private TextView resultText;
 
     @Override
@@ -30,18 +31,25 @@ public class MainActivity extends Activity implements View.OnClickListener{
         subButton  = (Button)   findViewById(R.id.subtractButton);
         mulButton  = (Button)   findViewById(R.id.multiplicationButton);
         divButton  = (Button)   findViewById(R.id.divisionButton);
+        resetButton = (Button)  findViewById(R.id.resetButton);
         resultText = (TextView) findViewById(R.id.resultTextView);
 
         addButton.setOnClickListener(this);
         subButton.setOnClickListener(this);
         mulButton.setOnClickListener(this);
         divButton.setOnClickListener(this);
+        resetButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        float left, right;
+        if (view.getId() == R.id.resetButton) {
+            leftInput.setText("");
+            rightInput.setText("");
+            return;
+        }
 
+        float left, right;
         try {
             left = Float.parseFloat(leftInput.getText().toString());
             right = Float.parseFloat(rightInput.getText().toString());
@@ -60,14 +68,16 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.subtractButton:
                 operation = "-";
-                result = left - right;
+                // Intentional Bug. Let's see if Appium can catch it or not!
+                // It should be '-' instead of +
+                result = left + right;
                 break;
             case R.id.multiplicationButton:
                 operation = "*";
                 result = left * right;
                 break;
             case R.id.divisionButton:
-                operation = "*";
+                operation = "/";
                 result = left / right;
                 break;
             default:
@@ -75,8 +85,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
         }
 
         resultText.setText(String.format("%.2f %s %.2f = %.2f", left, operation, right, result));
-        leftInput.setText("");
-        rightInput.setText("");
     }
 
     private void showError() {

@@ -1,7 +1,47 @@
-# Android
-/android/.gradle
-/android/local.properties
-/android/.idea
+# Project specific
+rspec_result.html
+
+# Generic
 .DS_Store
-/android/build/*
-/android/captures
+*~
+*.bak
+
+# Node
+node_modules
+
+
+# Ruby
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+vendor/
+logs/*.log
+screenshots/*
+*.html
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+
+# IDE Specific
+## IntelliJ IDEA
+*.iml
+android/.idea
+
+
+# Android
+android/.gradle
+android/local.properties
+android/build/
+android/captures
