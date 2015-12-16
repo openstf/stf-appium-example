@@ -1,14 +1,14 @@
 #!/bin/bash
 set -e
 
-if ["$DEVICE_SERIAL" == ""]; then
+if [ "$DEVICE_SERIAL" == "" ]; then
   echo "Please provide $DEVICE_SERIAL"
   exit
 fi
 
 connectUrl=$(node ./scripts/stf_connect.js $DEVICE_SERIAL)
 
-if ["$connectUrl" == ""]; then
+if [ "$connectUrl" == "" ]; then
   echo "Cannot connect to device"
   exit
 else

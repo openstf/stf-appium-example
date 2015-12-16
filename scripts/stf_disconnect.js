@@ -1,6 +1,8 @@
 var Swagger = require('swagger-client');
 
-var SWAGGER_URL = 'http://stf.swet.admin.mbga.local/api/v1/swagger.json';
+var SWAGGER_URL = 'http://10.33.85.12/api/v1/swagger.json'
+
+//var SWAGGER_URL = 'http://stf.swet.admin.mbga.local/api/v1/swagger.json';
 var AUTH_TOKEN  = 'b01df63d2b42459c9c885fb5b6cfed5b152996291134438c96d938962c1ef939';
 
 
