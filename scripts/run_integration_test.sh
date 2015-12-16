@@ -18,7 +18,7 @@ fi
 
 # Run appium server
 (appium &) > /dev/null 2>&1
-sleep 5
+sleep 10
 
 export UDID=$connectUrl
 
