@@ -2,7 +2,7 @@
 set -e
 
 # Run appium server
-(appium --log &) > /dev/null 2>&1
+(appium &) > /dev/null 2>&1
 sleep 5
 
 # Run tests
