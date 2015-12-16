@@ -1,0 +1,23 @@
+{
+  "name": "appium-docker-test",
+  "version": "1.0.0",
+  "description": "Appium Docker Test",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbanthia/appium-docker-test.git"
+  },
+  "keywords": [
+    "Appium",
+    "Docker"
+  ],
+  "author": "Vishal Banthia <vishal.banthia.vb@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbanthia/appium-docker-test/issues"
+  },
+  "homepage": "https://github.com/vbanthia/appium-docker-test#readme",
+  "dependencies": {
+    "swagger-client": "^2.1.9"
+  }
+}
