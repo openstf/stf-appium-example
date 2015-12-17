@@ -16,7 +16,7 @@ else
 fi
 
 function disconnetDevice {
-  if [ "$DEVICE_SERIAL" -ne "" ]; then
+  if [ "$DEVICE_SERIAL" != "" ]; then
     echo "Releasing device"
     node ./scripts/stf_disconnect.js $DEVICE_SERIAL
   fi
