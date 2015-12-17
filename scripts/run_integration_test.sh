@@ -15,6 +15,15 @@ else
   adb connect $connectUrl
 fi
 
+function disconnetDevice {
+  if [ "$DEVICE_SERIAL" -ne "" ]; then
+    echo "Releasing device"
+    node ./scripts/stf_disconnect.js $DEVICE_SERIAL
+  fi
+}
+
+# Always disconnect devic before exit
+trap disconnetDevice EXIT
 
 # Run appium server
 (appium &) > /dev/null 2>&1
@@ -30,6 +39,3 @@ else
  echo "Running $FEATURE_TYPE tests"
  bundle exec rake spec:$FEATURE_TYPE
 fi
-
-
-node ./scripts/stf_disconnect.js $DEVICE_SERIAL
