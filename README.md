@@ -1,1 +1,1 @@
-# stf-appium-example
+# appium-docker-test
