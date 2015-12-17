@@ -39,3 +39,5 @@ else
  echo "Running $FEATURE_TYPE tests"
  bundle exec rake spec:$FEATURE_TYPE
 fi
+
+disconnetDevice
