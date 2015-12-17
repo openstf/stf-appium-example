@@ -25,7 +25,7 @@ RSpec.describe 'Calculator' do
       $driver.find_element(:accessibility_id, 'additionButton').click
       sleep 1
 
-      result_text = $driver.find_element(:accessibility_id, 'resultTextView').text
+      result_text = $driver.texts.first.text
       expected_result = "%.2f" % x + " + " + "%.2f" % y + " = " + "%.2f" % (x + y)
       expect(result_text).to eq(expected_result)
     end
