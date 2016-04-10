@@ -26,8 +26,8 @@ function disconnetDevice {
 trap disconnetDevice EXIT
 
 # Run appium server
-(appium &) > /dev/null 2>&1
-sleep 10
+(./node_modules/.bin/appium &) > /dev/null 2>&1
+sleep 15
 
 export UDID=$connectUrl
 

@@ -1,14 +1,14 @@
 var Swagger = require('swagger-client');
 
-var SWAGGER_URL = 'http://10.33.85.12/api/v1/swagger.json'
-var AUTH_TOKEN  = 'd03f06b50c3f4be7aab5b8baf85a858003f3b6a0136349aa8b425fc2f0ddbd06';
+var SWAGGER_URL = 'http://localhost:7100/api/v1/swagger.json'
+var AUTH_TOKEN  = '03f5e019a2f94a35b90c30e40829395b5a0d0f0e7fd14bc496a176b03e229540';
 
 
 var client = new Swagger({
   url: SWAGGER_URL
 , usePromise: true
 , authorizations: {
-    accessTokenAuth: new Swagger.ApiKeyAuthorization('Authorization', 'bearer ' + AUTH_TOKEN, 'header')
+    accessTokenAuth: new Swagger.ApiKeyAuthorization('Authorization', 'Bearer ' + AUTH_TOKEN, 'header')
   }
 })
 

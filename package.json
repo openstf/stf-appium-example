@@ -1,23 +1,21 @@
 {
-  "name": "appium-docker-test",
+  "name": "stf-appium-example",
   "version": "1.0.0",
-  "description": "Appium Docker Test",
-  "main": "index.js",
+  "description": "Example explaining how to run Appium tests on OpenSTF device using its REST API.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vbanthia/appium-docker-test.git"
+    "url": "git+https://github.com/vbanthia/stf-appium-example.git"
   },
   "keywords": [
+    "OpenSTF",
     "Appium",
-    "Docker"
+    "Android"
   ],
-  "author": "Vishal Banthia <vishal.banthia.vb@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vbanthia/appium-docker-test/issues"
-  },
-  "homepage": "https://github.com/vbanthia/appium-docker-test#readme",
+  "author": "Vishal Banthia",
+  "license": "MIT",
+  "homepage": "https://github.com/vbanthia/stf-appium-example#readme",
   "dependencies": {
-    "swagger-client": "^2.1.9"
+    "appium": "^1.5.1",
+    "swagger-client": "2.1.9"
   }
 }

@@ -32,7 +32,6 @@ screenshots/*
 # YARD artifacts
 .yardoc
 _yardoc
-doc/
 
 # IDE Specific
 ## IntelliJ IDEA

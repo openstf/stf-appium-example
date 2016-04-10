@@ -17,8 +17,8 @@ RSpec.configure do |config|
   config.before(:suite) do
     driver_caps = {
       platformName: :android,
-      deviceName: '',
-      newCommandTimeout: '9999',
+      deviceName: 'Android',
+      newCommandTimeout: 9999,
       app: app_path,
       udid: udid
     }
