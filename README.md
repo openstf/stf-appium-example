@@ -1,6 +1,6 @@
 # STF Appium Example
 
-![Video](docs/demo.gif)
+![Video](doc/demo.gif)
 
 In this tutorial, I am going to explain how to integrate [Appium](http://appium.io/) automated test to OpenSTF device using its [REST API](). Theoretically, it is possible to run automated test of any tool on OpenSTF device. The reason for choosing Appium here is because it is one of the most widely used mobile automated testing tool.
 
