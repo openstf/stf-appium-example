@@ -6,7 +6,7 @@ In this tutorial, I am going to explain how to integrate [Appium](http://appium.
 
 # Prerequisites
 - Your device farm is ready and you are using v2.0 or above.
-- You have read [OpenSTF API Doc]().
+- You have read [OpenSTF API Doc](https://github.com/openstf/stf/blob/master/doc/API.md).
 - You know about [Appium](http://appium.io/) and its usages.
 
 # Dependencies
