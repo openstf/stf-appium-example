@@ -44,3 +44,4 @@ In this tutorial, I am going to explain how to integrate [Appium](http://appium.
   ```bash
   DEVICE_SERIAL=YOUR_DEVICE_SERIAL ./scripts/run_integration_test.sh
   ```
+4. [Sample test result](./doc/results/result.html)
